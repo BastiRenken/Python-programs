@@ -1,4 +1,3 @@
-# Raspberry Pi programmieren mit Python
+# Kleine Python Programma
 
-Die Programme in diesem Repository stammen aus dem Buch "Raspberry Pi programmieren mit Python" von Michael Weigend.
-Sie sind gut zum Python lernen geeignet.
+Mehrere kleine und einfache Python Programme, die gut zum lernen geeignet sind.
