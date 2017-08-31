@@ -1,4 +1,3 @@
-# Eingabe
 #!/usr/bin/python3
 
 print("Haben sie ihr Idealgewicht?")
