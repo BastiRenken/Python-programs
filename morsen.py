@@ -11,19 +11,42 @@ zeichenliste = [('a', '.-'), ('b', '-...'), ('c', '-.-.'), ('d', '-..'),
 (':', '---...'), ('?', '..--..'), ('-', '-....-'), ('/', '-..-.'),
 ('+', '.-.-.'), ('=', '-...-'), ('(', '-.--.-'), ('@', '.--.-.')]
 
-print("Text in Morsecode umwandeln")
+status = 1
 
-text = input("Text eingeben: ")
-text = text.lower()
-text = list(text)
-morsecode = []
+print("Willst du:")
+print("-(T)ext in Morsecode umwandeln?")
+print("oder")
+print("-(M)orsecode in Text umwandeln?")
 
-for i in range(len(text)):
-    for j in range(len(zeichenliste)):
-        if text[i] == zeichenliste[j][0]:
-            morsecode.extend(zeichenliste[j][1])
-            morsecode.extend(" ")
-            break
+while status == 1:
+    antwort = input(" ")
+    antwort = antwort.lower()
 
-#print(len(zeichenliste))
-print("".join(morsecode))
+    if antwort == "t":
+        text = input("Text eingeben: ")
+        text = text.lower()
+        text = list(text)
+        morsecode = []
+        for i in range(len(text)):
+            for j in range(len(zeichenliste)):
+                if text[i] == zeichenliste[j][0]:
+                    morsecode.extend(zeichenliste[j][1])
+                    morsecode.extend(" ")
+                    break
+        print("".join(morsecode))
+        status = 0
+
+    elif antwort == "m":
+        morsecode = input("Morsecode eingeben: ")
+        morsecode = morsecode.split()
+        text = []
+        for i in range(len(morsecode)):
+            for j in range(len(zeichenliste)):
+                if morsecode[i] == zeichenliste[j][1]:
+                    text.extend(zeichenliste[j][0])
+                    break
+        print("".join(text))
+        status = 0
+
+    else:
+        print("Geben sie T oder M ein und bestätigen sie mit Enter.")
