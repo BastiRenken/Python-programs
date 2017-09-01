@@ -2,7 +2,7 @@ from turtle import *
 import time
 
 STOP = 2
-START = 200
+START = 300
 
 def strecke(n):
     if n <= STOP:
