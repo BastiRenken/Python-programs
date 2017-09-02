@@ -53,14 +53,18 @@ while status == 1:
     else:
         print("Geben sie T oder M ein und bestätigen sie mit Enter.")
 
+
 print("Willst du das Ergebnis speichern?")
 print("[J]a oder [N]ein")
 
-'''
 auswahl = input(" ")
 auswahl = auswahl.lower()
-if auswahl == "J":
+if auswahl == "j":
     ergebnis = open("/Users/basti/Desktop/morsecode.txt", "a")
     ergebnis.write(ausgabe)
     ergebnis.close()
-'''
+    print("Ergebnis wurde unter /Users/basti/Desktop/morsecode.txt gespeichert.")
+elif auswahl == "n":
+    print("Ergebnis wurde nicht gespeichert.")
+else:
+    print("Geben sie J oder N ein und bestätigen sie mit Enter.")
