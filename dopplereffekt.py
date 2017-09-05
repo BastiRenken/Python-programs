@@ -13,13 +13,14 @@ c = 334.0
 
 status = "j"
 while status == "j":
-# Eingabe
+    # Eingabe
     f = input("Frequenz in Hz: ")
     f = float(f)
     v = input("Geschwindigkeit in m/s: ")
     v = float(v)
 
-    print("Bewegt sich die Schallquelle vom Beobachter [w]eg oder zu ihm [h]er")
+    print(
+        "Bewegt sich die Schallquelle vom Beobachter [w]eg oder zu ihm [h]er")
     richtung = input("").lower()
     while richtung != "w" and richtung != "h":
         print("Geben sie w oder h ein.")
@@ -27,11 +28,11 @@ while status == "j":
 
 # Berechnung
     if richtung == "w":
-        scheinfrequenz = f*(c/(c-v))
+        scheinfrequenz = f * (c / (c - v))
     elif richtung == "h":
-        scheinfrequenz = f*(c/(c+v))
+        scheinfrequenz = f * (c / (c + v))
 
-    print("Die registrierte Frequenz beträgt %f Hz." %scheinfrequenz)
+    print("Die registrierte Frequenz beträgt %f Hz." % scheinfrequenz)
     print("")
 
     print("Nochmal? [J]a oder [N]ein")
