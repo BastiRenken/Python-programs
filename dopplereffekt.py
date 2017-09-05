@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-status = "j"
 
 # Anleitung
+print("")
 print("Dieses Programm berechnet die Verändereung der Frequenz auf Grund des Dopplereffekts.")
 print("Angegeben werden müssen:")
 print("- Frequenz des ursprünglichen Tons")
@@ -11,6 +11,7 @@ print("")
 # Lichtgeschwindigkeit in m/s
 c = 334.0
 
+status = "j"
 while status == "j":
 # Eingabe
     f = input("Frequenz in Hz: ")
@@ -30,8 +31,7 @@ while status == "j":
     elif richtung == "h":
         scheinfrequenz = f*(c/(c+v))
 
-    print("scheinfrequenz")
-    print("Die Scheinfrequenz beträgt %f Hz." %scheinfrequenz)
+    print("Die registrierte Frequenz beträgt %f Hz." %scheinfrequenz)
     print("")
 
     print("Nochmal? [J]a oder [N]ein")
