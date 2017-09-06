@@ -21,9 +21,9 @@ while status == "j":
         print("Überschallknall")
     else:
         if richtung == "w":
-            scheinfrequenz = f * (c / (c - v))
-        elif richtung == "h":
             scheinfrequenz = f * (c / (c + v))
+        elif richtung == "h":
+            scheinfrequenz = f * (c / (c - v))
 # Ausgabe
         print("Die registrierte Frequenz beträgt %f Hz." % scheinfrequenz)
         print("")
