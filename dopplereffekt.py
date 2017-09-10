@@ -11,22 +11,33 @@ while status == "j":
     f = float(f)
     v = input("Geschwindigkeit in m/s: ")
     v = float(v)
-    print("Bewegt sich die Schallquelle vom Beobachter [w]eg oder zu ihm [h]er")
+    print("Bewegen sich Schallquelle und Beobachter voneinander [w]eg oder zueinander [h]er?")
     richtung = input("").lower()
     while richtung != "w" and richtung != "h":
         print("Geben sie w oder h ein.")
         richtung = input("").lower()
+    print("Bewegt sich die [S]challquelle oder der [B]eobachter?")
+    bewegung = input("").lower()
+    while bewegung != "s" and bewegung != "b":
+        print("Geben sie S oder B ein.")
+        bewegung = input("").lower()
 # Berechnung
-    if v >= c:
-        print("Überschallknall")
-    else:
+    if bewegung == "s":
+        if v >= c:
+            print("Überschallknall")
+        else:
+            if richtung == "w":
+                scheinfrequenz = f * (c / (c + v))
+            elif richtung == "h":
+                scheinfrequenz = f * (c / (c - v))
+    elif bewegung == "b":
         if richtung == "w":
-            scheinfrequenz = f * (c / (c + v))
+            scheinfrequenz = f * ((c - v) / c)
         elif richtung == "h":
-            scheinfrequenz = f * (c / (c - v))
+            scheinfrequenz = f * ((c + v) / c)
 # Ausgabe
-        print("Die registrierte Frequenz beträgt %f Hz." % scheinfrequenz)
-        print("")
+    print("Die registrierte Frequenz beträgt %f Hz." % scheinfrequenz)
+    print("")
 # Wiederholung
     print("Nochmal? [J]a [N]ein")
     status = input("").lower()
