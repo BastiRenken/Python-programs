@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # Anleitung
 print("")
-print("Dieses Programm berechnet die Verändereung der Frequenz auf Grund des Dopplereffekts.")
+print("Dieses Programm berechnet die Veränderung der Frequenz auf Grund des Dopplereffekts.")
 # Lichtgeschwindigkeit in m/s
 c = 334.0
 # Eingabe
@@ -11,10 +11,10 @@ while status == "j":
     f = float(f)
     v = input("Geschwindigkeit in m/s: ")
     v = float(v)
-    print("Bewegen sich Schallquelle und Beobachter voneinander [w]eg oder zueinander [h]er?")
+    print("Bewegen sich Schallquelle und Beobachter voneinander [w]eg oder aufeinander [z]u?")
     richtung = input("").lower()
-    while richtung != "w" and richtung != "h":
-        print("Geben sie w oder h ein.")
+    while richtung != "w" and richtung != "z":
+        print("Geben sie w oder z ein.")
         richtung = input("").lower()
     print("Bewegt sich die [S]challquelle oder der [B]eobachter?")
     bewegung = input("").lower()
@@ -28,12 +28,12 @@ while status == "j":
         else:
             if richtung == "w":
                 scheinfrequenz = f * (c / (c + v))
-            elif richtung == "h":
+            elif richtung == "z":
                 scheinfrequenz = f * (c / (c - v))
     elif bewegung == "b":
         if richtung == "w":
             scheinfrequenz = f * ((c - v) / c)
-        elif richtung == "h":
+        elif richtung == "z":
             scheinfrequenz = f * ((c + v) / c)
 # Ausgabe
     print("Die registrierte Frequenz beträgt %f Hz." % scheinfrequenz)
