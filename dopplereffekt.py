@@ -2,7 +2,7 @@
 # Anleitung
 print("")
 print("Dieses Programm berechnet die Veränderung der Frequenz auf Grund des Dopplereffekts.")
-# Lichtgeschwindigkeit in m/s
+# Schallgeschwindigkeit in m/s
 c = 334.0
 # Eingabe
 status = "j"
